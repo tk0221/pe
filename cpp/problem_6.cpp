@@ -13,13 +13,13 @@
 using namespace std;
 
 int main() {
-  long a = 0;
-  long b = 0;
+  int a = 0;
+  int b = 0;
  
   for (int i = 1; i <= 100; i++) {
     a += i*i;
     b += i;
   }
-  cout << "ANSWER : " << b*b-a  << endl;
+  cout << "ANSWER : " << b*b-a  << endl; //25164150
   return 0;
 }
