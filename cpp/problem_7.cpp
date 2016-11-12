@@ -5,7 +5,7 @@
 #include <iostream>
 
 using namespace std;
-int iamdumb[10001] ={0};
+int iamdumb[10001] ={2,0};
 bool verify(int target, int lastPrime) {
   for (int i = 0; i < lastPrime; i++) {
     if(target%iamdumb[i] == 0) 
@@ -15,14 +15,11 @@ bool verify(int target, int lastPrime) {
 }
 
 int main() {
-  iamdumb[0] = 2;
   int countPrime = 0;
   int start = 3;
   while(countPrime != 10000) {
     if(verify(start, countPrime)){
-      iamdumb[countPrime+1] = start;
-      start++;
-      countPrime++;
+      iamdumb[++countPrime] = start++;
     }else{
       start++;
     }
